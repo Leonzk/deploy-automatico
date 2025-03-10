@@ -1,16 +1,10 @@
 name: Publicação automática
-on:  
-  # nosso script será executado sempre quando houver push e pull request nas branches destacadas abaixo
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: [workflow_dispatch]
 jobs:
   build:
-    # sistema operacional da máquina que o Github irá disponibilizar para rodar o nosso script
+    
     runs-on: ubuntu-latest
- 
-    # aqui é iniciado o passo a passo para realizar o processo de publicação
+    
     steps:
       - uses: actions/checkout@v3
  
